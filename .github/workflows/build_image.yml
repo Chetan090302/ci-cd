@@ -19,6 +19,7 @@ jobs:
 
       - uses: docker/build-push-action@v6
         with:
-          context: .
-          push: true
-          tags: ${{secrets.DOCKER_USERNAME}}/python-app:latest
+            context: .
+            file: ./docker/Dockerfile
+            push: true
+            tags: ${{ secrets.DOCKER_USERNAME }}/python-app:latest
