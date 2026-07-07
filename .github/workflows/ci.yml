@@ -9,6 +9,10 @@ on:
 jobs:
   test:
 
+
+    env:
+      GEMINI_API_KEY : ${{secrets.GEMINI_API_KEY}}
+
     runs-on: ubuntu-latest
 
     steps:
