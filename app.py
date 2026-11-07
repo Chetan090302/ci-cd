@@ -9,7 +9,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 app = FastAPI(title="Issue Similarity API")
 
 client = genai.Client(
-    api_key=os.environ["GEMINI_API_KEY"]
+    api_key="xxx"
 )
 
 class SimilarityRequest(BaseModel):
@@ -59,3 +59,6 @@ def calculate_similarity(request: SimilarityRequest):
 @app.get("/health")
 def health():
     return {"status": "healthy"}
+
+def add(num1,num2):
+    return num1+num2
